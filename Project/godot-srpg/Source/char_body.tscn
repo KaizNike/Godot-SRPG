@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d26imigcvq5fw"]
+
+[ext_resource type="Texture2D" uid="uid://b7gwo5ncja1b2" path="res://Assets/Tiles/IsometricTRPGAssetPack_Entities.png" id="1_bfb51"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rfr7"]
+atlas = ExtResource("1_bfb51")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SkeletonModification2DJiggle" id="SkeletonModification2DJiggle_bykr2"]
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_okvfc"]
+enabled = true
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DJiggle_bykr2")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4avm4"]
+radius = 2.0
+height = 8.0
+
+[node name="CharBody" type="AnimatableBody2D" unique_id=1226547043]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2071113864]
+texture = SubResource("AtlasTexture_3rfr7")
+metadata/_edit_lock_ = true
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Sprite2D" unique_id=2130774792]
+visible = false
+modification_stack = SubResource("SkeletonModificationStack2D_okvfc")
+
+[node name="Bone2D" type="Bone2D" parent="Sprite2D/Skeleton2D" unique_id=908404329]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Bone2D" type="Bone2D" parent="Sprite2D/Skeleton2D/Bone2D" unique_id=2108952988]
+position = Vector2(4, 3)
+rest = Transform2D(1, 0, 0, 1, 4, 3)
+auto_calculate_length_and_angle = false
+length = 4.945
+bone_angle = -88.421
+
+[node name="Bone2D2" type="Bone2D" parent="Sprite2D/Skeleton2D/Bone2D" unique_id=212563406]
+position = Vector2(-4, 3)
+rest = Transform2D(1, 0, 0, 1, -4, 3)
+auto_calculate_length_and_angle = false
+length = 9.974
+bone_angle = 265.26297
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=360148822]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_4avm4")
+metadata/_edit_lock_ = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1510010789]
