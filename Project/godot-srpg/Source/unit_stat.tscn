@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://fpb5hw88lyxc"]
+
+[node name="UnitStat" type="Control" unique_id=171761964]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=8245882]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="PanelContainer" unique_id=905034407]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VSplitContainer" unique_id=1033103577]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VSplitContainer/HBoxContainer" unique_id=1849351586]
+layout_mode = 2
+text = "Unit:"
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/VSplitContainer/HBoxContainer" unique_id=199255665]
+layout_mode = 2
+text = "Swordsmen"
+expand_to_text_length = true
+
+[node name="Label2" type="Label" parent="PanelContainer/VSplitContainer/HBoxContainer" unique_id=1032611880]
+layout_mode = 2
+text = "Name:"
+
+[node name="LineEdit2" type="LineEdit" parent="PanelContainer/VSplitContainer/HBoxContainer" unique_id=1333755161]
+layout_mode = 2
+text = "Regii"
+expand_to_text_length = true
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VSplitContainer" unique_id=77328977]
+layout_mode = 2
+columns = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="PanelContainer/VSplitContainer/GridContainer" unique_id=1003492388]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer" unique_id=226527345]
+layout_mode = 2
+text = "Soft ATK:"
+
+[node name="Label2" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer" unique_id=1888040704]
+layout_mode = 2
+text = "12"
+horizontal_alignment = 2
+
+[node name="HSplitContainer2" type="HSplitContainer" parent="PanelContainer/VSplitContainer/GridContainer" unique_id=1296018689]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer2" unique_id=1079196152]
+layout_mode = 2
+text = "Hard ATK:"
+
+[node name="Label2" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer2" unique_id=115825256]
+layout_mode = 2
+text = "12"
+horizontal_alignment = 2
+
+[node name="HSplitContainer3" type="HSplitContainer" parent="PanelContainer/VSplitContainer/GridContainer" unique_id=1407024804]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer3" unique_id=65816064]
+layout_mode = 2
+text = "ORG:"
+
+[node name="Label2" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer3" unique_id=514809991]
+layout_mode = 2
+text = "12"
+horizontal_alignment = 2
+
+[node name="HSplitContainer4" type="HSplitContainer" parent="PanelContainer/VSplitContainer/GridContainer" unique_id=658100920]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer4" unique_id=1973226431]
+layout_mode = 2
+text = "MOR:"
+
+[node name="Label2" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer4" unique_id=1663996723]
+layout_mode = 2
+text = "12"
+horizontal_alignment = 2
+
+[node name="HSplitContainer5" type="HSplitContainer" parent="PanelContainer/VSplitContainer/GridContainer" unique_id=1758269914]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer5" unique_id=1934185578]
+layout_mode = 2
+text = "HP:"
+
+[node name="Label2" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer5" unique_id=186771231]
+layout_mode = 2
+text = "12"
+horizontal_alignment = 2
+
+[node name="HSplitContainer6" type="HSplitContainer" parent="PanelContainer/VSplitContainer/GridContainer" unique_id=628875225]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer6" unique_id=984446767]
+layout_mode = 2
+text = "MP:"
+
+[node name="Label2" type="Label" parent="PanelContainer/VSplitContainer/GridContainer/HSplitContainer6" unique_id=301188148]
+layout_mode = 2
+text = "12"
+horizontal_alignment = 2
