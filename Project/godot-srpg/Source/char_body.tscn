@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bagw5r20cbcy7" path="res://Source/char_body.gd" id="1_3rfr7"]
 [ext_resource type="Texture2D" uid="uid://b7gwo5ncja1b2" path="res://Assets/Tiles/IsometricTRPGAssetPack_Entities.png" id="1_bfb51"]
+[ext_resource type="PackedScene" uid="uid://fpb5hw88lyxc" path="res://Source/unit_stat.tscn" id="3_bykr2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3rfr7"]
 atlas = ExtResource("1_bfb51")
@@ -30,6 +31,31 @@ metadata/_edit_lock_ = true
 color = Color(1, 0.9019608, 0.60784316, 0.87058824)
 polygon = PackedVector2Array(0, -5, 1, -8, -1, -9)
 
+[node name="AllyPopup" type="Popup" parent="." unique_id=825112409]
+oversampling_override = 1.0
+size = Vector2i(350, 180)
+
+[node name="UnitStat" parent="AllyPopup" unique_id=171761964 instance=ExtResource("3_bykr2")]
+
+[node name="Label3" parent="AllyPopup/UnitStat/PanelContainer/VSplitContainer/HBoxContainer" parent_id_path=PackedInt32Array(171761964, 1033103577) index="4" unique_id=1645176269]
+text = "ALLY"
+
+[node name="FoePopup" type="Popup" parent="." unique_id=1479302779]
+oversampling_override = 1.0
+position = Vector2i(788, 0)
+size = Vector2i(350, 180)
+
+[node name="UnitStat" parent="FoePopup" unique_id=823558772 instance=ExtResource("3_bykr2")]
+
+[node name="Name" parent="FoePopup/UnitStat/PanelContainer/VSplitContainer/HBoxContainer" parent_id_path=PackedInt32Array(823558772, 1033103577) index="3" unique_id=1333755161]
+text = "Bowser"
+
+[node name="Label3" parent="FoePopup/UnitStat/PanelContainer/VSplitContainer/HBoxContainer" parent_id_path=PackedInt32Array(823558772, 1033103577) index="4" unique_id=1645176269]
+text = "FOE"
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+
+[editable path="AllyPopup/UnitStat"]
+[editable path="FoePopup/UnitStat"]
