@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://fpb5hw88lyxc"]
 
+[ext_resource type="Texture2D" uid="uid://cgonuxn1osvsh" path="res://Assets/Tiles/IsometricTRPGAssetPack_UI.png" id="1_jdjms"]
 [ext_resource type="Texture2D" uid="uid://5dlfl0grrmhk" path="res://icon.svg" id="1_ntsgc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ytsy"]
+atlas = ExtResource("1_jdjms")
+region = Rect2(47.885, 26.93, 16.725, 2.325)
+margin = Rect2(0, 0, 5.665, 0)
 
 [node name="UnitStat" type="Control" unique_id=171761964]
 layout_mode = 3
@@ -112,6 +118,8 @@ horizontal_alignment = 2
 
 [node name="HSplitContainer5" type="HSplitContainer" parent="PanelContainer/VSplitContainer/HSplitContainer8/GridContainer" unique_id=1758269914]
 layout_mode = 2
+split_offsets = PackedInt32Array(27, 88)
+split_offset = 27
 
 [node name="Label" type="Label" parent="PanelContainer/VSplitContainer/HSplitContainer8/GridContainer/HSplitContainer5" unique_id=1934185578]
 layout_mode = 2
@@ -121,6 +129,14 @@ text = "HP:"
 layout_mode = 2
 text = "12"
 horizontal_alignment = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="PanelContainer/VSplitContainer/HSplitContainer8/GridContainer/HSplitContainer5" unique_id=1986119350]
+layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 8
+stretch_margin_right = 8
+texture_progress = SubResource("AtlasTexture_6ytsy")
 
 [node name="HSplitContainer6" type="HSplitContainer" parent="PanelContainer/VSplitContainer/HSplitContainer8/GridContainer" unique_id=628875225]
 layout_mode = 2

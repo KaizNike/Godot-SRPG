@@ -31,21 +31,54 @@ metadata/_edit_lock_ = true
 color = Color(1, 0.9019608, 0.60784316, 0.87058824)
 polygon = PackedVector2Array(0, -5, 1, -8, -1, -9)
 
-[node name="AllyPopup" type="Popup" parent="." unique_id=825112409]
-oversampling_override = 1.0
-size = Vector2i(350, 180)
+[node name="AllyPopup" type="CanvasLayer" parent="." unique_id=6507156]
+visible = false
 
 [node name="UnitStat" parent="AllyPopup" unique_id=171761964 instance=ExtResource("3_bykr2")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="PanelContainer" parent="AllyPopup/UnitStat" index="0" unique_id=8245882]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 353.0
+offset_bottom = 171.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Label3" parent="AllyPopup/UnitStat/PanelContainer/VSplitContainer/HBoxContainer" parent_id_path=PackedInt32Array(171761964, 1033103577) index="4" unique_id=1645176269]
 text = "ALLY"
 
-[node name="FoePopup" type="Popup" parent="." unique_id=1479302779]
-oversampling_override = 1.0
-position = Vector2i(788, 0)
-size = Vector2i(350, 180)
+[node name="FoePopup" type="CanvasLayer" parent="." unique_id=469537690]
+visible = false
 
 [node name="UnitStat" parent="FoePopup" unique_id=823558772 instance=ExtResource("3_bykr2")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="PanelContainer" parent="FoePopup/UnitStat" index="0" unique_id=8245882]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -353.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 171.0
+grow_horizontal = 0
+grow_vertical = 1
 
 [node name="Name" parent="FoePopup/UnitStat/PanelContainer/VSplitContainer/HBoxContainer" parent_id_path=PackedInt32Array(823558772, 1033103577) index="3" unique_id=1333755161]
 text = "Bowser"
